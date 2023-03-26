@@ -29,7 +29,7 @@ galleryContainer.addEventListener('click', onGalleryContainerClick);
 function onGalleryContainerClick(event) {
   event.preventDefault();
 
-  const isGalleryImageEl = event.target.classList.contains('gallery__image');
+  const isGalleryImageEl = event.target.nodeName === 'IMG';
 
   if (!isGalleryImageEl) {
     return;
@@ -39,6 +39,7 @@ function onGalleryContainerClick(event) {
 
   openModalWindow(source);
 }
+
 
 function openModalWindow(source) {
   const instance = basicLightbox.create(`

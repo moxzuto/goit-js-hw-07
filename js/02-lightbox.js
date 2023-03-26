@@ -27,5 +27,6 @@ galleryList.append(...galleryItemsList);
 
 const lightbox = new SimpleLightbox('.gallery a', {
   captions: true,
-  captionDelay: 250
+  captionDelay: 250,
+  captionsData: 'alt',
 });
